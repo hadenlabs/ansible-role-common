@@ -21,3 +21,11 @@ tasks:
       - pipenv run molecule test
     deps:
       - task: check
+
+  scenario:
+    desc: create scenario molecule.
+    run: once
+    cmds:
+      - pipenv run molecule init scenario {{.SCENARIO}} --driver-name=docker --provisioner-name=ansible --role-name=ansible-role-common
+    deps:
+      - task: check
