@@ -3,27 +3,27 @@
 
 - include: dependences.yaml
   when:
-    - ansible-role-name_only_deploy == False
+    - common_only_deploy == False
 
 - include: apps.yaml
   when:
-    - ansible-role-name_only_deploy == False
+    - common_only_deploy == False
 
 - include: files.yaml
   when:
-    - ansible-role-name_only_deploy == False
+    - common_only_deploy == False
 
 - include: host.yaml
   when:
-    - ansible-role-name_only_deploy == False
+    - common_only_deploy == False
 
 - include: configure.yaml
   when:
-    - ansible-role-name_only_deploy == False
+    - common_only_deploy == False
 
 - include: install.yaml
   when:
-    - ansible-role-name_only_deploy == False
+    - common_only_deploy == False
 
 - include: templates.yaml
 

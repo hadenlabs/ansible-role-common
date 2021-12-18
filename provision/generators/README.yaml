@@ -5,7 +5,7 @@
 #
 
 # Name of this project
-name: ansible-role-template
+name: ansible-role-common
 
 # Tags of this project
 tags:
@@ -15,7 +15,7 @@ email:
   support: support@hadenlabs.com
 
 confluence:
-  space: AnsibleRoleTemplate
+  space: AnsibleRoleCommon
   title: Project
 
 # Logo for this project
@@ -25,16 +25,16 @@ confluence:
 license: 'LGPL-3.0'
 
 # Canonical GitHub repo
-github_repo: hadenlabs/ansible-role-template
+github_repo: hadenlabs/ansible-role-common
 
 # Badges to display
 badges:
   - name: Latest Release
-    image: https://img.shields.io/github/release/hadenlabs/ansible-role-template
-    url: https://github.com/hadenlabs/ansible-role-template/releases
+    image: https://img.shields.io/github/release/hadenlabs/ansible-role-common
+    url: https://github.com/hadenlabs/ansible-role-common/releases
   - name: Lint
-    image: https://img.shields.io/github/workflow/status/hadenlabs/ansible-role-template/lint-code
-    url: https://github.com/hadenlabs/ansible-role-template/actions?workflow=lint-code
+    image: https://img.shields.io/github/workflow/status/hadenlabs/ansible-role-common/lint-code
+    url: https://github.com/hadenlabs/ansible-role-common/actions?workflow=lint-code
   - name: pre-commit
     image: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
     url: https://github.com/pre-commit/pre-commit
@@ -53,15 +53,15 @@ requirements: |-
 # Short description of this project
 description: |-
 
-  ansible-role-template for hadenlabs.
+  ansible-role-common for hadenlabs.
 
 # How to use this project
 usage: |-
   ```bash
-    ansible-galaxy install hadenlabs.ansible-role-name
-    agr 'ansible-role-template' 'new-project'
-    agr 'AnsibleRoleTemplate' 'NewProject'
-    agr 'ansible-role-name' 'project'
+    ansible-galaxy install hadenlabs.common
+    agr 'ansible-role-common' 'new-project'
+    agr 'AnsibleRoleCommon' 'NewProject'
+    agr 'common' 'project'
   ```
 
   Full working examples can be found in [examples](./examples) folder.

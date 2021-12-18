@@ -1,9 +1,9 @@
 ---
-- name: Create files ansible-role-name
+- name: Create files common
   become: true
   file:
     path: '{{ item.path }}'
     state: '{{ item.state }}'
     owner: '{{ item.owner }}'
-  with_items: '{{ _ansible-role-name_create_files | default({}) }}'
-  when: _ansible-role-name_create_files is defined
+  with_items: '{{ _common_create_files | default({}) }}'
+  when: _common_create_files is defined

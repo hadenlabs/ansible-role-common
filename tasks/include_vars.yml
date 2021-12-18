@@ -5,5 +5,5 @@
     - '{{ ansible_os_family | lower }}.yml'
     - 'main.yml'
   tags:
-    - 'ansible-role-name'
-    - 'ansible-role-name-vars'
+    - 'common'
+    - 'common-vars'

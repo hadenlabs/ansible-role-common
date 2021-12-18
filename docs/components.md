@@ -1,8 +1,8 @@
-<!-- Space: AnsibleRoleTemplate -->
+<!-- Space: AnsibleRoleCommon -->
 <!-- Parent: Project -->
 <!-- Title: Components -->
 
-<!-- Label: AnsibleRoleTemplate -->
+<!-- Label: AnsibleRoleCommon -->
 <!-- Label: Project -->
 <!-- Label: Components -->
 <!-- Include: docs/disclaimer.md -->

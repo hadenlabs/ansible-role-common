@@ -1,8 +1,8 @@
-<!-- Space: AnsibleRoleTemplate -->
+<!-- Space: AnsibleRoleCommon -->
 <!-- Parent: Project -->
 <!-- Title: Releasing -->
 
-<!-- Label: AnsibleRoleTemplate -->
+<!-- Label: AnsibleRoleCommon -->
 <!-- Label: Project -->
 <!-- Label: Releasing -->
 <!-- Include: docs/disclaimer.md -->
@@ -12,7 +12,7 @@
 
 ## Bump a new version
 
-Make a new version of ansible-role-template in the following steps:
+Make a new version of ansible-role-common in the following steps:
 
 ### Generate version major
 

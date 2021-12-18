@@ -5,5 +5,5 @@
 The default role variables in `defaults/main.yml` are:
 
 ```{.yaml}
-# defaults file for ansible-role-template
+# defaults file for ansible-role-common
 ```

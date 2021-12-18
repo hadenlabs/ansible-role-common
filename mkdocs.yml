@@ -1,4 +1,4 @@
-site_name: ansible-role-template Documentation
+site_name: ansible-role-common Documentation
 theme: 'material'
 markdown_extensions:
   - toc:
@@ -15,8 +15,8 @@ extra:
   font:
     text: 'Source Sans Pro'
 
-repo_name: 'hadenlabs/ansible-role-template'
-repo_url: 'https://github.com/hadenlabs/ansible-role-template'
+repo_name: 'hadenlabs/ansible-role-common'
+repo_url: 'https://github.com/hadenlabs/ansible-role-common'
 copyright: 'Copyright © 2021 <a href="https://hadenlabs.com">hadenlabs</a>'
 
 google_analytics:
