@@ -1,0 +1,11 @@
+---
+- name: Install ansible-role-name package dependencies
+  become: true
+  package: name={{ item }} state=present
+  with_items: '{{ _ansible-role-name_packages | default([]) }}'
+  register: install_ansible-role-name_packages
+  when: _ansible-role-name_packages is defined
+  tags:
+    - install
+    - apt
+    - update_cache
