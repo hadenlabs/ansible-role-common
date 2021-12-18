@@ -1,2 +1,2 @@
 ---
-ansible-role-name_only_deploy: true
+common_only_deploy: true

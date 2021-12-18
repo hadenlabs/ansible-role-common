@@ -1,11 +1,11 @@
 {
-  "baseUrl": "https://github.com/hadenlabs/ansible-role-template",
+  "baseUrl": "https://github.com/hadenlabs/ansible-role-common",
   "ignorePatterns": [
     {
       "pattern": "^https://hadenlabs.com"
     },
     {
-      "pattern": "^https://github.com/hadenlabs/ansible-role-template/compare"
+      "pattern": "^https://github.com/hadenlabs/ansible-role-common/compare"
     }
   ],
   "replacementPatterns": [

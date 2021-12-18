@@ -1,4 +1,4 @@
-origin: github.com/hadenlabs/ansible-role-template
+origin: github.com/hadenlabs/ansible-role-common
 issue_tracker: GITHUB
 auth:
   type: none

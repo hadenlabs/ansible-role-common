@@ -1,8 +1,8 @@
-<!-- Space: AnsibleRoleTemplate -->
+<!-- Space: AnsibleRoleCommon -->
 <!-- Parent: Project -->
 <!-- Title: Contributing -->
 
-<!-- Label: AnsibleRoleTemplate -->
+<!-- Label: AnsibleRoleCommon -->
 <!-- Label: Project -->
 <!-- Label: Contributing -->
 <!-- Include: docs/disclaimer.md -->
@@ -10,11 +10,11 @@
 
 # How To Contribute
 
-Contributions to ansible-role-template are welcome.
+Contributions to ansible-role-common are welcome.
 
 Feel free to use all of the contribution options:
 
-- Contribute to ansible-role-template repositories on [GitHub](https://github.com/hadenlabs/ansible-role-template). See [Git flow](./contribute/git-flow.md).
+- Contribute to ansible-role-common repositories on [GitHub](https://github.com/hadenlabs/ansible-role-common). See [Git flow](./contribute/git-flow.md).
 
 ## Getting Started
 
@@ -75,7 +75,7 @@ See [Git flow](./contribute/git-flow.md).
 
 ### Documentation
 
-Documentation is a part of the ansible-role-template code base. You can find the documentation files in the `doc/` subdirectory of the [main repository](https://github.com/hadenlabs/ansible-role-template). This means that the contribution process is the same for both the source code and documentation.
+Documentation is a part of the ansible-role-common code base. You can find the documentation files in the `doc/` subdirectory of the [main repository](https://github.com/hadenlabs/ansible-role-common). This means that the contribution process is the same for both the source code and documentation.
 
 ### Testing
 
@@ -83,15 +83,15 @@ See [Testing](./testing.md).
 
 ### Code Submission
 
-1.  See if a [Pull Request](https://github.com/hadenlabs/ansible-role-template/pulls) exists
+1.  See if a [Pull Request](https://github.com/hadenlabs/ansible-role-common/pulls) exists
     - Add some comments or review the code to help it along
     - Don\'t be afraid to comment when logic needs clarification
-2.  Create a Fork and open a [Pull Request](https://github.com/hadenlabs/ansible-role-template/pulls) if needed
+2.  Create a Fork and open a [Pull Request](https://github.com/hadenlabs/ansible-role-common/pulls) if needed
 
 ### Code Review
 
 - Anyone can review code
-- Any [Pull Request](https://github.com/hadenlabs/ansible-role-template/pulls) should be closed or merged within a week
+- Any [Pull Request](https://github.com/hadenlabs/ansible-role-common/pulls) should be closed or merged within a week
 
 ### Code Acceptance
 
