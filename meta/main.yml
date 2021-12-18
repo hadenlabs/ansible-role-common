@@ -5,7 +5,7 @@ dependencies:
   # if you add dependencies to this list.
 
 galaxy_info:
-  common: common
+  role_name: common
   namespace: hadenlabs
   author: hadenlabs
   description: ansible role common

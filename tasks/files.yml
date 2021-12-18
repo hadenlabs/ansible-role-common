@@ -1,9 +1,9 @@
 ---
-- name: Create files common
+- name: Create files
   become: true
   file:
     path: '{{ item.path }}'
     state: '{{ item.state }}'
     owner: '{{ item.owner }}'
-  with_items: '{{ _common_create_files | default({}) }}'
-  when: _common_create_files is defined
+  with_items: '{{common_create_files | default({}) }}'
+  when: common_create_files is defined

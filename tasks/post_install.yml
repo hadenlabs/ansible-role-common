@@ -1,1 +1,12 @@
 ---
+- name: Copy files local to remote
+  become: true
+  become_user: '{{ common_user }}'
+  copy:
+    src: '{{ item.src }}'
+    dest: '{{ item.path }}'
+    mode: '{{ item.permissions }}'
+    directory_mode: 0750
+  with_items: '{{ common_copy_files | default({}) }}'
+  tags:
+    - copy_files

@@ -1,1 +1,17 @@
 ---
+- name: Update apps
+  become: true
+  become_user: '{{ common_user }}'
+  git:
+    repo: '{{ item.repo }}'
+    dest: '{{ item.location }}'
+    version: '{{ item.version }}'
+    accept_hostkey: True
+  with_items: '{{ common_deployments | default([]) }}'
+  when:
+    - common_deployments is defined
+    - common_user != 'vagrant'
+  tags:
+    - apps
+    - deploy
+    - update
