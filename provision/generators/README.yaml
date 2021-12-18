@@ -59,9 +59,6 @@ description: |-
 usage: |-
   ```bash
     ansible-galaxy install hadenlabs.common
-    agr 'ansible-role-common' 'new-project'
-    agr 'AnsibleRoleCommon' 'NewProject'
-    agr 'common' 'project'
   ```
 
   Full working examples can be found in [examples](./examples) folder.
