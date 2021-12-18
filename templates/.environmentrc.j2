@@ -1,0 +1,5 @@
+{% if common_environment_dict %}
+{% for key,value in common_environment_dict.envs.items() %}
+{{key}}={{value}}
+{% endfor %}
+{% endif %}

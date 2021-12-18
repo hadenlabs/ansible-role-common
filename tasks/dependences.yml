@@ -1,11 +1,9 @@
 ---
 - name: Install common package dependencies
+  package: name="{{ item }}" state=present
   become: true
-  package: name={{ item }} state=present
-  with_items: '{{ _common_packages | default([]) }}'
+  with_items: '{{ common_packages | default([]) }}'
   register: install_common_packages
-  when: _common_packages is defined
+  when: common_packages is defined
   tags:
     - install
-    - apt
-    - update_cache

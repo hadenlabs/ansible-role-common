@@ -1,2 +1,28 @@
 ---
-common_only_deploy: true
+# common_deployment_apps update code deployment
+
+common_packages: []
+common_user: ubuntu
+common_only_deploy: no
+# common_create_files:
+#   - path: "{{ app_dir_home }}/.ssh"
+#     state: "directory"
+#     owner: "{{ user }}"
+#   - path: "{{ apps_path }}/src/assets"
+#     state: "directory"
+#     owner: "{{ user }}"
+
+# common_deployment:
+#     - name: "{{ app_name }}"
+#     version: "{{ git.branch.deployment }}" # Could be a hash, branch or tag name
+#     repo: "git@github.com:hadenlabs/test-repository"
+#     force: yes
+#     location: "{{ apps_path }}"
+
+# common_environment_dict:
+#   path: /usr/src/server/file
+#   owner: ubuntu
+#   group: ubuntu
+#   permissions: 0640
+#   envs:
+#     KEY: Value

@@ -1,32 +1,32 @@
 ---
 - include: include_vars.yml
 
-- include: dependences.yaml
+- include: dependences.yml
   when:
     - common_only_deploy == False
 
-- include: apps.yaml
+- include: apps.yml
   when:
     - common_only_deploy == False
 
-- include: files.yaml
+- include: files.yml
   when:
     - common_only_deploy == False
 
-- include: host.yaml
+- include: host.yml
   when:
     - common_only_deploy == False
 
-- include: configure.yaml
+- include: configure.yml
   when:
     - common_only_deploy == False
 
-- include: install.yaml
+- include: install.yml
   when:
     - common_only_deploy == False
 
-- include: templates.yaml
+- include: templates.yml
 
-- include: environment.yaml
+- include: environment.yml
 
-- include: post_install.yaml
+- include: post_install.yml

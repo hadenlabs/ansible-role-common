@@ -1,1 +1,22 @@
 ---
+- name: Set environment variables
+  become: true
+  lineinfile:
+    dest: /etc/environment
+    line: '{{ item.key }}="{{ item.value }}"'
+  notify: Export environment variables
+  with_dict: '{{ common_env_vars | default({}) }}'
+  when:
+    - common_env_vars is defined
+  tags:
+    - environment
+    - vars
+
+- name: Set var env to file
+  template:
+    src: '.environmentrc.j2'
+    dest: '{{ common_environment_dict.path }}'
+    owner: '{{ common_environment_dict.owner }}'
+    group: '{{ common_environment_dict.group }}'
+    mode: '0644'
+  when: common_environment_dict is defined
