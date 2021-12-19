@@ -3,10 +3,18 @@
   hosts: all
 
   vars:
+    user: root
     common_packages:
       - vim
       - git
       - build-essential
+
+    common_deployment:
+      - name: 'ansible-role-common'
+        version: 'develop' # Could be a hash, branch or tag name
+        repo: 'git@github.com:hadenlabs/ansible-role-common'
+        force: yes
+        location: '~/'
 
   tasks:
     - name: 'Include ansible-role-common'
