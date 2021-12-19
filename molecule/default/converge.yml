@@ -9,7 +9,7 @@
       when: ansible_os_family == 'Debian'
 
   vars:
-    user: root
+    user: ubuntu
     common_user: '{{ user }}'
 
     common_create_files:
