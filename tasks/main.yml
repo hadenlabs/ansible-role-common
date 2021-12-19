@@ -1,32 +1,42 @@
 ---
-- include: include_vars.yml
+- name: Include vars by operating system.
+  import_tasks: include_vars.yml
 
-- include: dependences.yml
+- name: Install dependencies
+  import_tasks: dependences.yml
   when:
     - common_only_deploy == False
 
-- include: apps.yml
+- name: Install Or Update Applications
+  import_tasks: apps.yml
   when:
     - common_only_deploy == False
 
-- include: files.yml
+- name: Install Or Update files
+  import_tasks: files.yml
   when:
     - common_only_deploy == False
 
-- include: host.yml
+- name: Install Or Update host
+  import_tasks: host.yml
   when:
     - common_only_deploy == False
 
-- include: configure.yml
+- name: implement configure
+  import_tasks: configure.yml
   when:
     - common_only_deploy == False
 
-- include: install.yml
+- name: Implement task install
+  import_tasks: install.yml
   when:
     - common_only_deploy == False
 
-- include: templates.yml
+- name: Implement task templates
+  import_tasks: templates.yml
 
-- include: environment.yml
+- name: Implement task environment
+  import_tasks: environment.yml
 
-- include: post_install.yml
+- name: Implement task post install
+  import_tasks: post_install.yml
