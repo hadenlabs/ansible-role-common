@@ -9,7 +9,7 @@
       - git
       - build-essential
 
-    common_deployment:
+    common_deployments:
       - name: 'ansible-role-common'
         version: 'develop' # Could be a hash, branch or tag name
         repo: 'git@github.com:hadenlabs/ansible-role-common'
