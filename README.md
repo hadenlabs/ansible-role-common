@@ -33,9 +33,6 @@ This is a list of applications that need to be installed previously to enjoy all
 
 ```bash
   ansible-galaxy install hadenlabs.common
-  agr 'ansible-role-common' 'new-project'
-  agr 'AnsibleRoleCommon' 'NewProject'
-  agr 'common' 'project'
 ```
 
 Full working examples can be found in [examples](./examples) folder.
@@ -50,12 +47,87 @@ Full working examples can be found in [examples](./examples) folder.
 <!-- Include: docs/disclaimer.md -->
 <!-- Include: ac:toc -->
 
-### basic
+## packages
 
-To run this playbook with default settings, create a basic playbook like this:
+To run this playbook with default settings, for install package like this:
 
-```{.yaml}
-- hosts: servers
+```yaml
+- hosts: all
+
+  vars:
+    user: ubuntu
+    common_packages:
+      - vim
+      - git
+      - build-essential
+
+    common_user: '{{ user }}'
+
+  roles:
+    - hadenlabs.common
+```
+
+## Create Files
+
+To run this playbook create a files playbook like this:
+
+```yaml
+- hosts: all
+
+  vars:
+    user: ubuntu
+    common_user: '{{ user }}'
+
+    common_create_files:
+      - path: 'full_path/.ssh'
+        state: 'directory'
+        owner: '{{ user }}'
+
+  roles:
+    - hadenlabs.common
+```
+
+## Deployment
+
+To run this playbook deployment a files playbook like this:
+
+```yaml
+- hosts: all
+
+  vars:
+    user: ubuntu
+    common_user: '{{ user }}'
+
+    common_deployments:
+      - name: '{{ app_name }}'
+        version: '{{ git.branch.deployment }}' # Could be a hash, branch or tag name
+        repo: 'git@github.com:hadenlabs/test-repository'
+        force: yes
+        location: '{{ apps_path }}'
+
+  roles:
+    - hadenlabs.common
+```
+
+## Environment
+
+To run this playbook environment a files playbook like this:
+
+```yaml
+- hosts: all
+
+  vars:
+    user: ubuntu
+    common_user: '{{ user }}'
+
+    common_environment_dict:
+      path: /usr/src/server/file
+      owner: '{{ user }}'
+      group: ubuntu
+      permissions: 0640
+      envs:
+        KEY: Value
+
   roles:
     - hadenlabs.common
 ```
