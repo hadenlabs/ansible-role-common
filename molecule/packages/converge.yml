@@ -1,0 +1,14 @@
+---
+- name: Converge
+  hosts: all
+
+  vars:
+    common_packages:
+      - vim
+      - git
+      - build-essential
+
+  tasks:
+    - name: 'Include ansible-role-common'
+      include_role:
+        name: 'ansible-role-common'
