@@ -14,6 +14,7 @@ To run this playbook with default settings, for install package like this:
 - hosts: all
 
   vars:
+    user: ubuntu
     common_packages:
       - vim
       - git
@@ -33,6 +34,7 @@ To run this playbook create a files playbook like this:
 - hosts: all
 
   vars:
+    user: ubuntu
     common_user: '{{ user }}'
 
     common_create_files:
@@ -52,6 +54,7 @@ To run this playbook deployment a files playbook like this:
 - hosts: all
 
   vars:
+    user: ubuntu
     common_user: '{{ user }}'
 
     common_deployments:
@@ -73,11 +76,12 @@ To run this playbook environment a files playbook like this:
 - hosts: all
 
   vars:
+    user: ubuntu
     common_user: '{{ user }}'
 
     common_environment_dict:
       path: /usr/src/server/file
-      owner: ubuntu
+      owner: '{{ user }}'
       group: ubuntu
       permissions: 0640
       envs:
