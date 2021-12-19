@@ -54,7 +54,7 @@ To run this playbook deployment a files playbook like this:
   vars:
     common_user: '{{ user }}'
 
-    common_deployment:
+    common_deployments:
       - name: '{{ app_name }}'
         version: '{{ git.branch.deployment }}' # Could be a hash, branch or tag name
         repo: 'git@github.com:hadenlabs/test-repository'
