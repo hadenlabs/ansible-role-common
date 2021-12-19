@@ -13,10 +13,10 @@
     - vars
 
 - name: Set var env to file
-  template:
+  ansible.builtin.template:
     src: '.environmentrc.j2'
     dest: '{{ common_environment_dict.path }}'
     owner: '{{ common_environment_dict.owner }}'
     group: '{{ common_environment_dict.group }}'
-    mode: '0644'
+    mode: '{{ common_environment_dict.permissions }}'
   when: common_environment_dict is defined
