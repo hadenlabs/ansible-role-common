@@ -79,9 +79,9 @@ To run this playbook create a files playbook like this:
     common_user: '{{ user }}'
 
     common_create_files:
-      - path: 'full_path/.ssh'
-        state: 'directory'
+      - path: 'full_path/.env'
         owner: '{{ user }}'
+        mode: '0755'
 
   roles:
     - hadenlabs.common
@@ -123,8 +123,8 @@ To run this playbook environment a files playbook like this:
     common_environment_dict:
       path: /usr/src/server/file
       owner: '{{ user }}'
-      group: ubuntu
-      permissions: 0640
+      group: '{{ group_name }}'
+      permissions: '0640'
       envs:
         KEY: Value
 
