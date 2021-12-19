@@ -2,19 +2,28 @@
 - name: Converge
   hosts: all
 
+  pre_tasks:
+    - name: Update apt cache.
+      apt: update_cache=yes cache_valid_time=600
+      when: ansible_os_family == 'Debian'
+
   vars:
-    user: root
+    user: ubuntu
     common_packages:
-      - vim
       - git
       - build-essential
+
+    common_create_files:
+      - path: '~/repo'
+        state: 'directory'
+        owner: '{{ user }}'
 
     common_deployments:
       - name: 'ansible-role-common'
         version: 'develop' # Could be a hash, branch or tag name
         repo: 'git@github.com:hadenlabs/ansible-role-common'
         force: yes
-        location: '~/'
+        location: '~/repo/ansible-role-common'
 
   tasks:
     - name: 'Include ansible-role-common'
