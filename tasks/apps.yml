@@ -1,12 +1,13 @@
 ---
-- name: Update application clone
-  become: true
+- name: Create or Update application
+  become: yes
   become_user: '{{ common_user }}'
+  become_method: enable
   git:
     repo: '{{ item.repo }}'
     dest: '{{ item.location }}'
     version: '{{ item.version }}'
-    accept_hostkey: True
+    accept_hostkey: yes
   with_items: '{{ common_deployments | default([]) }}'
   when:
     - common_deployments is defined

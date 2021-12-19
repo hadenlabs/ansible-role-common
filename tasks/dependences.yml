@@ -1,8 +1,9 @@
 ---
 - name: Install common package dependencies
-  package: name="{{ item }}" state=present
+  ansible.builtin.package:
+    name: "{{ common_packages }}"
+    state: present
   become: true
-  with_items: '{{ common_packages | default([]) }}'
   register: install_common_packages
   when: common_packages is defined
   tags:
