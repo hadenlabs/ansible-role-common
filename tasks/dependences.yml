@@ -5,7 +5,7 @@
 
 - name: Install common package dependencies
   ansible.builtin.package:
-    name: "{{ common_packages }}"
+    name: '{{ common_packages }}'
     state: present
   become: true
   register: install_common_packages
