@@ -1,9 +1,12 @@
 ---
 - name: Create files
-  become: true
-  file:
+  become: yes
+  become_user: '{{ common_user }}'
+  ansible.builtin.file:
     path: '{{ item.path }}'
-    state: '{{ item.state }}'
+    state: touch
     owner: '{{ item.owner }}'
-  with_items: '{{common_create_files | default({}) }}'
-  when: common_create_files is defined
+    mode: '{{ item.mode }}'
+  with_items: '{{ common_create_files | default({}) }}'
+  when:
+    - common_create_files is defined
