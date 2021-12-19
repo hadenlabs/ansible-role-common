@@ -21,7 +21,7 @@
     common_deployments:
       - name: 'ansible-role-common'
         version: 'develop' # Could be a hash, branch or tag name
-        repo: 'git@github.com:hadenlabs/ansible-role-common'
+        repo: 'git@github.com:hadenlabs/ansible-role-common.git'
         force: yes
         location: '~/repo/ansible-role-common'
 
