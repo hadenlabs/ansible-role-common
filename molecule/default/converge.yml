@@ -3,6 +3,23 @@
   hosts: all
   become: true
 
+  vars:
+    user: root
+    common_user: '{{ user }}'
+
+    common_create_files:
+      - path: '~/test-path'
+        state: 'directory'
+        owner: '{{ user }}'
+
+    common_environment_dict:
+      path: '~/test-path/file'
+      owner: '{{ user }}'
+      group: '{{ user }}'
+      permissions: 0640
+      envs:
+        KEY: Value
+
   tasks:
     - name: 'Include ansible-role-common'
       include_role:
