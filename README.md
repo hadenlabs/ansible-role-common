@@ -87,6 +87,26 @@ To run this playbook create a files playbook like this:
     - hadenlabs.common
 ```
 
+## Create Directories
+
+To run this playbook create a directories playbook like this:
+
+```yaml
+- hosts: all
+
+  vars:
+    user: ubuntu
+    common_user: '{{ user }}'
+
+    common_create_directories:
+      - path: 'full_path/directory'
+        owner: '{{ user }}'
+        mode: '0755'
+
+  roles:
+    - hadenlabs.common
+```
+
 ## Deployment
 
 To run this playbook deployment a files playbook like this:
