@@ -12,11 +12,6 @@
   when:
     - common_only_deploy == False
 
-- name: Install Or Update files
-  import_tasks: files.yml
-  when:
-    - common_only_deploy == False
-
 - name: Install Or Update host
   import_tasks: host.yml
   when:
