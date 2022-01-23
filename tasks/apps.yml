@@ -3,10 +3,11 @@
   become: yes
   become_user: '{{ common_user }}'
   become_method: enable
-  git:
+  ansible.builtin.git:
     repo: '{{ item.repo }}'
     dest: '{{ item.location }}'
     version: '{{ item.version }}'
+    force: '{{ item.force }}'
     accept_hostkey: yes
   with_items: '{{ common_deployments | default([]) }}'
   when:
