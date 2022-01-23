@@ -2,8 +2,17 @@
 - name: Include vars by operating system.
   import_tasks: include_vars.yml
 
+- name: Update apt cache.
+  apt: update_cache=yes force_apt_get=yes
+  when: ansible_os_family == 'Debian'
+
 - name: Install dependencies
   import_tasks: dependences.yml
+  when:
+    - common_only_deploy == False
+
+- name: implement configure
+  import_tasks: configure.yml
   when:
     - common_only_deploy == False
 
@@ -14,11 +23,6 @@
 
 - name: Install Or Update host
   import_tasks: host.yml
-  when:
-    - common_only_deploy == False
-
-- name: implement configure
-  import_tasks: configure.yml
   when:
     - common_only_deploy == False
 

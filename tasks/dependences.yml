@@ -1,8 +1,4 @@
 ---
-- name: Update apt cache.
-  apt: update_cache=yes cache_valid_time=600
-  when: ansible_os_family == 'Debian'
-
 - name: Install common package dependencies
   ansible.builtin.package:
     name: '{{ common_packages }}'
